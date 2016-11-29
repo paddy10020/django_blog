@@ -1,0 +1,9 @@
+<!--在test.html文件下添加-->
+<!DOCTYPE html>
+{% extends "base.html" %}
+    {% block content %}
+        {% for post in post_lists %}
+            <h2>{{post.title}}</h2>
+            <p>{{post.article_category}}</p>
+        <% endfor %}
+    {% endblock %}

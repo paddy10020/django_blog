@@ -20,4 +20,6 @@ from blog import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.welcome, name = 'welcome'),
+    url(r'^index/$', views.index, name = 'index'),
+    url(r'^article/([0-9]+)/$', views.detail, name = 'detail'), # 这个很重要
 ]

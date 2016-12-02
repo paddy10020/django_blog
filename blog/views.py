@@ -11,4 +11,9 @@ def index(request):
     return render(request, 'index.html', {'post_lists':post_lists})
 
 def detail(request, num):
-    return HttpResponse(str(num))
+    try:
+        post_list = Article.objects.get(id = int(num))
+        return render(request, 'detial.html', {'post_list': post_list})
+    except Exception as e:
+        print(e)
+    return HttpResponse(num)

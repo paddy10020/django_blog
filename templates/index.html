@@ -4,6 +4,7 @@
     {% block content %}
         {% for post in post_lists %}
             <h2>{{post.title}}</h2>
-            <p>{{post.article_category}}</p>
-        <% endfor %}
+            <p>{{post.author}}</p>
+            <p>{{post.article_catagory}}</p>
+        {% endfor %}
     {% endblock %}
